@@ -1,0 +1,205 @@
+.material-symbols-outlined,
+.material-symbols-rounded,
+.material-symbols-sharp,
+.material-icons {
+    font-family: 'Material Symbols Outlined', 'Material Icons', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    display: inline-block;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Animasi Goyang / Ayunan Kartu Gantung */
+@keyframes card-swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(2.5deg);
+  }
+  40% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(1.2deg);
+  }
+  80% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-card-swing {
+  transform-origin: top center;
+  animation: card-swing 6s ease-in-out infinite;
+}
+
+.animate-card-swing:hover {
+  animation-duration: 3s;
+}
+
+/* Typewriter Cursor Effect */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2.5px;
+  height: 1.15em;
+  background-color: #3B82F6;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: cursor-blink 0.8s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Marquee / Tulisan Berjalan Horizontal */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Waving Hand Animation */
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-hand 2.4s infinite;
+}
+
+/* Title Typewriter Cursor */
+.title-cursor {
+  display: inline-block;
+  width: 3.5px;
+  height: 0.85em;
+  background-color: #3B82F6;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+  animation: cursor-blink 0.8s infinite;
+}
+
+/* Shimmer Glow Running Light on Name */
+@keyframes text-glow-flow {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.name-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #93c5fd 25%,
+    #3b82f6 50%,
+    #60a5fa 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: text-glow-flow 4s linear infinite;
+}
+
+/* Animasi Gradasi Berjalan & Glow untuk Tagline Hero */
+@keyframes tagline-gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-tagline-glow {
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #93c5fd 25%,
+    #38bdf8 50%,
+    #60a5fa 75%,
+    #ffffff 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: tagline-gradient-flow 5s ease-in-out infinite;
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Denyut Cahaya Garis Samping Tagline (Border Glow Pulse) */
+.tagline-border-glow {
+  border-left: 3px solid #3b82f6;
+  box-shadow: -4px 0 16px -2px rgba(59, 130, 246, 0.5);
+  animation: border-glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes border-glow-pulse {
+  0%, 100% {
+    border-color: #3b82f6;
+    box-shadow: -4px 0 16px -2px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    border-color: #60a5fa;
+    box-shadow: -6px 0 24px 1px rgba(96, 165, 250, 0.75);
+  }
+}
